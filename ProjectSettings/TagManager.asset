@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - boundary
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - cancer
   - player
   - cancer guide
-  - 
-  - 
+  - player cam
+  - killa t
   - 
   - 
   - 

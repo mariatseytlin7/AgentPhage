@@ -7,33 +7,43 @@ public class KillaTmovement : MonoBehaviour
 
      [SerializeField]
      private GameObject player;
+     
+     private Vector3 playerPos; 
+
+   
 
      [SerializeField]
      private float speed = 8f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerPosition = player.transform.position;
+        playerPos = player.transform.position;
+        //direction = (playerPos - transform.position).normalized;
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveToPlayer();
-        DestroyOnHit();
+        
+        
         
     }
 
     private void MoveToPlayer()
     {
-        transform.position = Vector3.MoveTowards(transform.position, playerPosition, (speed * Time.deltaTime));
+       
+       transform.Translate(playerPos * Time.deltaTime * speed);
+
+   
+
     }
 
-    private void DestroyOnHit()
+     /*private void OnTriggerEnter(Collider other)
     {
-        if (transform.position == playerPosition)
+       if (GetComponent<Collider>().gameObject.name == "Player")
         {
             Destroy(player);
         }
-    }
+    }*/
 }

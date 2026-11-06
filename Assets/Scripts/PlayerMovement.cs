@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             targetPos = new Quaternion(0, currentRot.y, 0, 1);
 
         }
-
+        
         else
         
         {
@@ -78,13 +78,13 @@ public class PlayerMovement : MonoBehaviour
         if (collider.gameObject.name == "Left boundary")
         {
             Debug.Log("left boundary reached");
-            transform.Translate(1.0f,0.0f,1.0f, Space.Self);
+            transform.Translate(1.0f,0.0f,0.0f, Space.Self);
            
         }
          if (collider.gameObject.name == "Right boundary")
          {
              Debug.Log("right boundary reached");
-             transform.Translate(0.0f,0.0f,-1.0f, Space.Self);
+             transform.Translate(-1.0f,0.0f,0.0f, Space.Self);
          }
           if (collider.gameObject.name == "Top boundary")
          {
